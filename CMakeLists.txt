@@ -5,13 +5,13 @@ project(muduo C CXX)
 enable_testing()
 
 if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE "Release")
+  set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
 set(CXX_FLAGS
  -g
  # -DVALGRIND
- # -DMUDUO_STD_STRING
+ -DMUDUO_STD_STRING
  -DCHECK_PTHREAD_RETURN_VALUE
  -D_FILE_OFFSET_BITS=64
  -Wall
